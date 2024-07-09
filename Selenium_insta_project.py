@@ -68,7 +68,7 @@ class Instagram:
             return e  # Other errors
         
     def scrollDown(self):
-        jsKomut = """
+        jscommand = """
         page = document.querySelector(".x1rife3k");
         page.scrollTo(0,page.scrollHeight);
         var pageEnd = page.scrollHeight;
@@ -78,7 +78,7 @@ class Instagram:
         while True:
             last = pageEnd
             time.sleep(1)
-            pageEnd = self.browser.execute_script(jsKomut)
+            pageEnd = self.browser.execute_script(jscommand)
             if last == pageEnd:
                 break
 
